@@ -1,5 +1,3 @@
-#!/usr/bin/env
-
 import prompt
 import random
 number_of_steps = 3
@@ -15,9 +13,9 @@ def brain_calc():
         num1 = random.randint(1, 20)
         num2 = random.randint(1, 20)
         operator = random.choice(operators)
-        game_answer = eval(str(num1)+operator+str(num2))
+        game_answer = eval(str(num1)+operator+str(num2)) 
         user_answer = prompt.string(f'Question: {num1} {operator} {num2} \nYour answer: ')
-        if user_answer != game_answer:
+        if int(user_answer) != int(game_answer):
             print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(
               user_answer, game_answer))
             print("Let's try again, {}!".format(user_name))
