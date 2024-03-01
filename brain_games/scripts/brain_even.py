@@ -26,6 +26,10 @@ def brain_even():
             print('Correct!')
     print('Congratulations, {}!'.format(user_name))
 
+def main():
+    brain_even()
 
 if __name__ == '__main__':
-    brain_even()
+    main()
+
+
