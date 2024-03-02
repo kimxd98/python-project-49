@@ -18,16 +18,18 @@ def brain_even():
             game_answer = 'no'
         user_answer = prompt.string(f'Question: {num} \nYour answer: ')
         if user_answer != game_answer:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(
-              user_answer, game_answer))
+            print("'{}' is wrong answer ;(. Correct answer was '{}'."
+                  .format(user_answer, game_answer))
             print("Let's try again, {}!".format(user_name))
             return
         else:
             print('Correct!')
     print('Congratulations, {}!'.format(user_name))
 
+
 def main():
     brain_even()
+
 
 if __name__ == '__main__':
     main()

@@ -5,12 +5,14 @@ import random
 import math
 number_of_steps = 3
 
+
 def show_wrong_answer(user_answer, game_answer, user_name):
     print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(
         user_answer, game_answer))
     print("Let's try again, {}!".format(user_name))
 
-def brain_even():
+
+def brain_gcd():
     print('Welcome to the Brain Games!')
     user_name = prompt.string('May I have your name? ')
     print(f"Hello, {user_name}!")
@@ -31,8 +33,10 @@ def brain_even():
             return
         print('Congratulations, {}!'.format(user_name))
 
+
 def main():
-    brain_even()
+    brain_gcd()
+
 
 if __name__ == '__main__':
     main()

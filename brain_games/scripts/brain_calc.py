@@ -1,7 +1,9 @@
 import prompt
 import random
 number_of_steps = 3
-operators = ["+","-","*"]
+operators = ["+", "-", "*"]
+
+
 def show_wrong_answer(user_answer, game_answer, user_name):
     print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(
         user_answer, game_answer))
@@ -17,11 +19,12 @@ def brain_calc():
         num1 = random.randint(1, 20)
         num2 = random.randint(1, 20)
         operator = random.choice(operators)
-        game_answer = eval(str(num1)+operator+str(num2)) 
-        user_answer = prompt.string(f'Question: {num1} {operator} {num2} \nYour answer: ')
+        game_answer = eval(str(num1) + operator + str(num2))
+        user_answer = prompt.string(f'Question: {num1} {operator} {num2} \n'
+                                    f'Your answer: ')
         if user_answer.isnumeric():
             if int(user_answer) != int(game_answer):
-                show_wrong_answer(user_answer,game_answer, user_name)
+                show_wrong_answer(user_answer, game_answer, user_name)
                 return
             else:
                 print('Correct!')
